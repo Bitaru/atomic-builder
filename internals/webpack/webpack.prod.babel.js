@@ -25,7 +25,8 @@ module.exports = require('./webpack.base.babel')({
 
   // Utilize long-term caching by adding content hashes (not compilation hashes) to compiled assets
   output: {
-    publicPath: 'https://s3.eu-central-1.amazonaws.com/pub-images/',
+    path: path.resolve(process.cwd(), 'docs'),
+    publicPath: 'http://atomic-builder.bitaru.com',
     filename: '[name].[chunkhash].js'
   },
 
